@@ -637,5 +637,3 @@ docker exec -it articence-postgres psql -U user -c "CREATE DATABASE articence_te
 ✅ **Production-ready** - Docker support, environment configuration, error handling  
 
 ---
-
-**Built with ❤️ for Articence**
