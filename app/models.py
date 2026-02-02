@@ -6,7 +6,7 @@ from sqlalchemy import (
     BigInteger, Column, DateTime, Enum, Float, 
     ForeignKey, Integer, String, Text, UniqueConstraint
 )
-from sqlalchemy.ext.asyncio import AsyncAttrs, create_async_engine, async_sessionmaker
+from sqlalchemy.ext.asyncio import AsyncAttrs, AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase, relationship
 
 from config import settings
@@ -125,7 +125,7 @@ engine = create_async_engine(
 AsyncSessionLocal = async_sessionmaker(
     engine,
     expire_on_commit=False,
-    class_=None
+    class_=AsyncSession
 )
 
 
